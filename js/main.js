@@ -30,6 +30,7 @@
   } else {
     return "F";
   }
+
 })();
 
 
@@ -42,8 +43,8 @@
   for (var i = 0; i < scoreArr.length; i++) {
     total += scoreArr[i];
   }
-
   return total/scoreArr.length;
+
 })();
 
 
@@ -55,6 +56,7 @@
   var sortArr = scoreArr.sort(function(a,b) {
     return a-b;
   });
+
   //check to see if array length is even or odd
   if (sortArr.length  % 2 === 0) {
     //divide array into two even arrays
@@ -67,6 +69,7 @@
     //return middle
     return sortArr[Math.floor((sortArr.length -1)/ 2)];
   }
+
 })();
 
 
@@ -77,6 +80,7 @@
   var count = {};
   var max = 0;
   var result = [];
+
   //iterate through array and count up the occurances of each element
   scoreArr.forEach(function (i) {
       count[i] = (count[i] || 0) + 1;
@@ -85,6 +89,7 @@
           max = count[i];
       }
   });
+
   //iterate through object count and pushing max into result array if there are more than two max occurances both will be pushed
   Object.keys(count).forEach(function (k) {
       count[k] === max && result.push(k);
