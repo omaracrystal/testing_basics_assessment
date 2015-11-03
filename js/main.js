@@ -29,3 +29,14 @@
   }
 })();
 
+(function averageScore (scoreArray){
+
+  var total = 0;
+
+  for (var i = 0; i < scoreArray.length; i++) {
+    total += scoreArray[i];
+  }
+  return total/scoreArray.length;
+})();
+
+
